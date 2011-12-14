@@ -35,6 +35,7 @@ if &t_Co > 2 || has("gui_running")
     syntax on
     set background=dark
     colorscheme blackboard
+    set guifont=Menlo:h12
 endif
 
 if has("autocmd")

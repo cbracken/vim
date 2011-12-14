@@ -49,7 +49,7 @@ set mouse=a
 map <silent> <S-F1> :if g:toggleMenu == 1<CR>:set guioptions-=m<CR>:let g:toggleMenu = 0<CR>:else<CR>:set guioptions+=m<CR>:let g:toggleMenu = 1<CR>:endif<CR>
 
 if has("gui_running")
-  set showtabline=2          " Always show tabs
+  set showtabline=1          " Show tabs only if > 1 open
   set guioptions-=T          " Hide toolbar
   set guioptions-=m          " Hide menu bar
 endif

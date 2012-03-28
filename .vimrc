@@ -36,6 +36,13 @@ if &t_Co > 2 || has("gui_running")
     set background=dark
     colorscheme blackboard
     set guifont=Menlo:h12
+
+    " Highlight trailing whitespace
+    highlight ExtraWhitespace ctermbg=red guibg=red
+    au ColorScheme * highlight ExtraWhitespace guibg=red
+    au BufEnter * match ExtraWhitespace /\s\+$/
+    au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+    au InsertLeave * match ExtraWhiteSpace /\s\+$/
 endif
 
 if has("autocmd")

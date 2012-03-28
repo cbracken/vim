@@ -38,12 +38,16 @@ if &t_Co > 2 || has("gui_running")
     set guifont=Menlo:h12
 
     " Highlight trailing whitespace
-    highlight ExtraWhitespace ctermbg=red guibg=red
-    au ColorScheme * highlight ExtraWhitespace guibg=red
-    au BufEnter * match ExtraWhitespace /\s\+$/
-    au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-    au InsertLeave * match ExtraWhiteSpace /\s\+$/
+    if has("autocmd")
+      highlight ExtraWhitespace ctermbg=red guibg=red
+      au ColorScheme * highlight ExtraWhitespace guibg=red
+      au BufEnter * match ExtraWhitespace /\s\+$/
+      au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+      au InsertLeave * match ExtraWhiteSpace /\s\+$/
+    endif
 endif
+
+filetype plugin on
 
 if has("autocmd")
   au BufNewFile,BufRead *.scala set filetype=scala

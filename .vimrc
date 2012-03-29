@@ -6,9 +6,7 @@ set cpo&vim
 
 map! <S-Insert> <MiddleMouse>
 map  <S-Insert> <MiddleMouse>
-
-" Clear search highlight
-nmap <F2> :noh<CR>
+nmap <F2> :noh<CR>           " Clear seach highlight
 
 let &cpo=s:cpo_save
 unlet s:cpo_save
@@ -32,19 +30,19 @@ set expandtab
 
 " Colorscheme and syntax highlighting
 if &t_Co > 2 || has("gui_running")
-    syntax on
-    set background=dark
-    colorscheme blackboard
-    set guifont=Menlo:h12
+  syntax on
+  set background=dark
+  colorscheme blackboard
+  set guifont=Menlo:h12
 
-    " Highlight trailing whitespace
-    if has("autocmd")
-      highlight ExtraWhitespace ctermbg=red guibg=red
-      au ColorScheme * highlight ExtraWhitespace guibg=red
-      au BufEnter * match ExtraWhitespace /\s\+$/
-      au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-      au InsertLeave * match ExtraWhiteSpace /\s\+$/
-    endif
+  " Highlight trailing whitespace
+  if has("autocmd")
+    highlight ExtraWhitespace ctermbg=red guibg=red
+    au ColorScheme * highlight ExtraWhitespace guibg=red
+    au BufEnter * match ExtraWhitespace /\s\+$/
+    au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
+    au InsertLeave * match ExtraWhiteSpace /\s\+$/
+  endif
 endif
 
 filetype plugin on
@@ -53,13 +51,12 @@ if has("autocmd")
   au BufNewFile,BufRead *.scala set filetype=scala
 endif
 
-" Enable mouse in all modes
-set mouse=a
-
 " Menubar toggling
 :let g:toggleMenu = 0
 map <silent> <S-F1> :if g:toggleMenu == 1<CR>:set guioptions-=m<CR>:let g:toggleMenu = 0<CR>:else<CR>:set guioptions+=m<CR>:let g:toggleMenu = 1<CR>:endif<CR>
 
+" Mouse/UI
+set mouse=a                  " Enable mouse in all modes
 if has("gui_running")
   set showtabline=1          " Show tabs only if > 1 open
   set guioptions-=T          " Hide toolbar

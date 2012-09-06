@@ -33,7 +33,11 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set background=dark
   colorscheme blackboard
-  set guifont=Menlo:h12
+  if has("gui_macvim")
+    set guifont=Menlo:h12
+  elseif has("unix")
+    set guifont=Ubuntu\ Mono\ 12
+  endif
 
   " Highlight trailing whitespace
   if has("autocmd")

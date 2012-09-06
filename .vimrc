@@ -61,4 +61,5 @@ if has("gui_running")
   set showtabline=1          " Show tabs only if > 1 open
   set guioptions-=T          " Hide toolbar
   set guioptions-=m          " Hide menu bar
+  set lines=60 columns=120
 endif

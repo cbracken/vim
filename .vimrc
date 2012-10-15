@@ -4,9 +4,9 @@ set encoding=utf-8
 let s:cpo_save=&cpo
 set cpo&vim
 
-map! <S-Insert> <MiddleMouse>
-map  <S-Insert> <MiddleMouse>
-nmap <F2> :noh<CR>           " Clear seach highlight
+map!     <S-Insert> <MiddleMouse>
+map      <S-Insert> <MiddleMouse>
+nmap     <F2>       :noh<CR>           " Clear seach highlight
 
 let &cpo=s:cpo_save
 unlet s:cpo_save

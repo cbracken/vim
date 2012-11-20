@@ -6,6 +6,7 @@ set cpo&vim
 
 map!     <S-Insert> <MiddleMouse>
 map      <S-Insert> <MiddleMouse>
+inoremap jj         <ESC>
 nmap     <F2>       :noh<CR>           " Clear seach highlight
 
 let &cpo=s:cpo_save

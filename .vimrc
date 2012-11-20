@@ -37,7 +37,7 @@ if &t_Co > 2 || has("gui_running")
   if has("gui_macvim")
     set guifont=Menlo:h12
   elseif has("unix")
-    set guifont=Ubuntu\ Mono\ 12
+    set guifont=Monospace\ 11
   endif
 
   " Highlight trailing whitespace

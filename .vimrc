@@ -33,7 +33,8 @@ set expandtab
 if &t_Co > 2 || has("gui_running")
   syntax on
   set background=dark
-  colorscheme blackboard
+  let g:liquidcarbon_high_contrast=1
+  colorscheme liquidcarbon
   if has("gui_macvim")
     set guifont=Menlo:h12
   elseif has("unix")

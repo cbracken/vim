@@ -51,8 +51,8 @@ if &t_Co > 2 || has("gui_running")
 
     " Highlight over-length lines
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-    au BufEnter,InsertLeave * match OverLength /\%81v.\+/
-    au BufEnter,InsertLeave *.java match OverLength /\%101v.\+/
+    au BufEnter,InsertLeave * 2match OverLength /\%81v.\+/
+    au BufEnter,InsertLeave *.java 2match OverLength /\%101v.\+/
   endif
 endif
 

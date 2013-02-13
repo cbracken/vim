@@ -45,9 +45,8 @@ if &t_Co > 2 || has("gui_running")
     " Highlight trailing whitespace
     highlight ExtraWhitespace ctermbg=red guibg=red
     au ColorScheme * highlight ExtraWhitespace guibg=red
-    au BufEnter * match ExtraWhitespace /\s\+$/
+    au BufEnter,InsertLeave * match ExtraWhitespace /\s\+$/
     au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-    au InsertLeave * match ExtraWhiteSpace /\s\+$/
 
     " Highlight over-length lines
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929

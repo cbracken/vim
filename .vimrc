@@ -41,13 +41,18 @@ if &t_Co > 2 || has("gui_running")
     set guifont=Monospace\ 11
   endif
 
-  " Highlight trailing whitespace
   if has("autocmd")
+    " Highlight trailing whitespace
     highlight ExtraWhitespace ctermbg=red guibg=red
     au ColorScheme * highlight ExtraWhitespace guibg=red
     au BufEnter * match ExtraWhitespace /\s\+$/
     au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
     au InsertLeave * match ExtraWhiteSpace /\s\+$/
+
+    " Highlight over-length lines
+    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
+    au BufEnter,InsertLeave * match OverLength /\%81v.\+/
+    au BufEnter,InsertLeave *.java match OverLength /\%101v.\+/
   endif
 endif
 

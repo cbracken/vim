@@ -57,15 +57,15 @@ if has("autocmd")
   au BufNewFile,BufRead *.scala set filetype=scala
 endif
 
-" Menubar toggling
-:let g:toggleMenu = 0
-map <silent> <S-F1> :if g:toggleMenu == 1<CR>:set guioptions-=m<CR>:let g:toggleMenu = 0<CR>:else<CR>:set guioptions+=m<CR>:let g:toggleMenu = 1<CR>:endif<CR>
-
 " Mouse/UI
 set mouse=a                  " Enable mouse in all modes
 if has("gui_running")
+  set lines=60 columns=120
   set showtabline=1          " Show tabs only if > 1 open
   set guioptions-=T          " Hide toolbar
   set guioptions-=m          " Hide menu bar
-  set lines=60 columns=120
+
+  " Menubar toggling
+  :let g:toggleMenu = 0
+  map <silent> <S-F1> :if g:toggleMenu == 1<CR>:set guioptions-=m<CR>:let g:toggleMenu = 0<CR>:else<CR>:set guioptions+=m<CR>:let g:toggleMenu = 1<CR>:endif<CR>
 endif

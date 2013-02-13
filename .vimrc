@@ -71,5 +71,12 @@ if has("gui_running")
 
   " Menubar toggling
   :let g:toggleMenu = 0
-  map <silent> <S-F1> :if g:toggleMenu == 1<CR>:set guioptions-=m<CR>:let g:toggleMenu = 0<CR>:else<CR>:set guioptions+=m<CR>:let g:toggleMenu = 1<CR>:endif<CR>
+  map <silent> <S-F1>
+    \ :if g:toggleMenu == 1<CR>
+    \   :set guioptions-=m<CR>
+    \   :let g:toggleMenu = 0<CR>
+    \ :else<CR>
+    \   :set guioptions+=m<CR>
+    \   :let g:toggleMenu = 1<CR>
+    \ :endif<CR>
 endif

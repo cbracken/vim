@@ -57,8 +57,7 @@ if has("autocmd")
   au BufNewFile,BufRead *.scala set filetype=scala
 endif
 
-" Mouse/UI
-set mouse=a                  " Enable mouse in all modes
+" Other UI stuff
 if has("gui_running")
   set lines=60 columns=120
   set showtabline=1          " Show tabs only if > 1 open

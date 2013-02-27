@@ -38,7 +38,7 @@ if &t_Co > 2 || has("gui_running")
   if has("gui_macvim")
     set guifont=Menlo:h14
   elseif has("unix")
-    set guifont=Monospace\ 11
+    set guifont=Source\ Code\ Pro\ 11
   endif
 
   if has("autocmd")

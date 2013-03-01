@@ -8,6 +8,10 @@ map!     <S-Insert> <MiddleMouse>
 map      <S-Insert> <MiddleMouse>
 inoremap jj         <ESC>
 nmap     <F2>       :noh<CR>           " Clear seach highlight
+noremap  <Up>        <NOP>
+noremap  <Down>      <NOP>
+noremap  <Left>      <NOP>
+noremap  <Right>     <NOP>
 
 let &cpo=s:cpo_save
 unlet s:cpo_save

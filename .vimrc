@@ -16,10 +16,20 @@ unlet s:cpo_save
 set incsearch                " Turn on incrememental searching
 set hlsearch                 " Highlight search
 set visualbell               " Less noise
-set nu                       " Line numbering
+set relativenumber           " Relative line numbering
 set ruler                    " Show row/col in status
 set showmatch                " Flash matching paren
 set history=50               " 50 lines of cmdline history
+
+" Toggle relative numbering
+function! RelNumToggle()
+  if (&relativenumber == 1)
+    set number
+  else
+    set relativenumber
+  endif
+endfunc
+nnoremap <C-n> :call RelNumToggle()<CR>
 
 " Indentation/tabulation
 set autoindent

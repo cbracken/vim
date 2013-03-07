@@ -26,14 +26,14 @@ set showmatch                " Flash matching paren
 set history=50               " 50 lines of cmdline history
 
 " Toggle relative numbering
-function! RelNumToggle()
+function! ToggleNumbering()
   if (&relativenumber == 1)
     set number
   else
     set relativenumber
   endif
 endfunc
-nnoremap <C-n> :call RelNumToggle()<CR>
+nmap <C-n> :call ToggleNumbering()<CR>
 
 " Indentation/tabulation
 set autoindent
@@ -83,13 +83,12 @@ if has("gui_running")
   set guioptions-=m          " Hide menu bar
 
   " Menubar toggling
-  :let g:toggleMenu = 0
-  map <silent> <S-F1>
-    \ :if g:toggleMenu == 1<CR>
-    \   :set guioptions-=m<CR>
-    \   :let g:toggleMenu = 0<CR>
-    \ :else<CR>
-    \   :set guioptions+=m<CR>
-    \   :let g:toggleMenu = 1<CR>
-    \ :endif<CR>
+  function! ToggleMenu()
+    if &go=~#'m'
+      set go-=m
+    else
+      set go+=m
+    endif
+  endfunc
+  map <silent> <S-F1> :call ToggleMenu()<CR>
 endif

@@ -1,9 +1,17 @@
 set nocompatible
 set encoding=utf-8
 
+filetype off
+set rtp+=~/.vim/bundle/vundle
+call vundle#rc()
+Bundle 'gmarik/vundle'
+Bundle 'The-NERD-tree'
+Bundle 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}
+Bundle 'spacehi.vim'
+filetype plugin indent on
+
 let s:cpo_save=&cpo
 set cpo&vim
-
 map!     <S-Insert> <MiddleMouse>
 map      <S-Insert> <MiddleMouse>
 inoremap jj         <ESC>
@@ -12,7 +20,6 @@ noremap  <Up>        <NOP>
 noremap  <Down>      <NOP>
 noremap  <Left>      <NOP>
 noremap  <Right>     <NOP>
-
 let &cpo=s:cpo_save
 unlet s:cpo_save
 
@@ -68,8 +75,6 @@ if &t_Co > 2 || has("gui_running")
     au BufEnter,InsertLeave *.java 2match OverLength /\%101v.\+/
   endif
 endif
-
-filetype plugin on
 
 if has("autocmd")
   au BufNewFile,BufRead *.scala set filetype=scala

@@ -79,10 +79,6 @@ if &t_Co > 2 || has("gui_running")
   endif
 endif
 
-if has("autocmd")
-  au BufNewFile,BufRead *.scala set filetype=scala
-endif
-
 " Other UI stuff
 if has("gui_running")
   set lines=60 columns=120

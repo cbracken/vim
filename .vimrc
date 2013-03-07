@@ -8,6 +8,8 @@ Bundle 'gmarik/vundle'
 Bundle 'The-NERD-tree'
 Bundle 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}
 Bundle 'spacehi.vim'
+Bundle 'blackboard.vim'
+Bundle 'Liquid-Carbon'
 filetype plugin indent on
 
 let s:cpo_save=&cpo

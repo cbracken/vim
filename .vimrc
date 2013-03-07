@@ -4,12 +4,13 @@ set encoding=utf-8
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
-Bundle 'gmarik/vundle'
-Bundle 'The-NERD-tree'
-Bundle 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}
-Bundle 'spacehi.vim'
 Bundle 'blackboard.vim'
+Bundle 'fugitive.vim'
+Bundle 'gmarik/vundle'
+Bundle 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}
 Bundle 'Liquid-Carbon'
+Bundle 'The-NERD-tree'
+Bundle 'spacehi.vim'
 filetype plugin indent on
 
 let s:cpo_save=&cpo

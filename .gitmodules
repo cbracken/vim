@@ -1,21 +1,28 @@
 [submodule "Liquid-Carbon"]
   path=bundle/Liquid-Carbon
   url=https://github.com/vim-scripts/Liquid-Carbon.git
+  ignore = untracked
 [submodule "The-NERD-tree"]
   path=bundle/The-NERD-tree
   url=https://github.com/vim-scripts/The-NERD-tree.git
+  ignore = untracked
 [submodule "blackboard.vim"]
   path=bundle/blackboard.vim
   url=https://github.com/vim-scripts/blackboard.vim.git
+  ignore = untracked
 [submodule "fugitive.vim"]
   path=bundle/fugitive.vim
   url=https://github.com/vim-scripts/fugitive.vim.git
+  ignore = untracked
 [submodule "scala-dist"]
   path=bundle/scala-dist
   url=git://github.com/scala/scala-dist.git
+  ignore = untracked
 [submodule "spachi.vim"]
   path=bundle/spacehi.vim
   url=https://github.com/vim-scripts/spacehi.vim.git
+  ignore = untracked
 [submodule "Vundle"]
   path=bundle/vundle
   url=git://github.com/gmarik/vundle.git
+  ignore = untracked

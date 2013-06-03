@@ -26,3 +26,6 @@
   path=bundle/vundle
   url=git://github.com/gmarik/vundle.git
   ignore = untracked
+[submodule "bundle/Dart"]
+	path = bundle/Dart
+	url = https://github.com/vim-scripts/Dart.git

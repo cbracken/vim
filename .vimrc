@@ -5,6 +5,7 @@ filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
 Bundle 'blackboard.vim'
+Bundle 'Dart'
 Bundle 'fugitive.vim'
 Bundle 'gmarik/vundle'
 Bundle 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}

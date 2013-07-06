@@ -54,6 +54,11 @@ set sw=2
 set softtabstop=2
 set expandtab
 
+" Whitespace highlighting
+let g:spacehi_spacecolor="ctermbg=red guibg=red"
+let g:spacehi_tabcolor="ctermbg=red guibg=red"
+let g:spacehi_nbspcolor="ctermbg=red guibg=red"
+
 " Colorscheme and syntax highlighting
 if &t_Co > 2 || has("gui_running")
   syntax on
@@ -67,16 +72,10 @@ if &t_Co > 2 || has("gui_running")
   endif
 
   if has("autocmd")
-    " Highlight trailing whitespace
-    highlight ExtraWhitespace ctermbg=red guibg=red
-    au ColorScheme * highlight ExtraWhitespace guibg=red
-    au BufEnter,InsertLeave * match ExtraWhitespace /\s\+$/
-    au InsertEnter * match ExtraWhitespace /\s\+\%#\@<!$/
-
     " Highlight over-length lines
     highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-    au BufEnter,InsertLeave * 2match OverLength /\%81v.\+/
-    au BufEnter,InsertLeave *.java 2match OverLength /\%101v.\+/
+    au BufEnter,InsertLeave * match OverLength /\%81v.\+/
+    au BufEnter,InsertLeave *.java match OverLength /\%101v.\+/
   endif
 endif
 

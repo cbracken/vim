@@ -46,6 +46,12 @@ function! ToggleNumbering()
 endfunc
 nmap <C-n> :call ToggleNumbering()<CR>
 
+if has("autocmd")
+  " Use absolute numbering in insert mode
+  au InsertEnter * :set number
+  au InsertLeave * :set relativenumber
+endif
+
 " Indentation/tabulation
 set autoindent
 set smartindent

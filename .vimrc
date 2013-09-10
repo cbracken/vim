@@ -31,7 +31,7 @@ unlet s:cpo_save
 set incsearch                " Turn on incrememental searching
 set hlsearch                 " Highlight search
 set visualbell               " Less noise
-set relativenumber           " Relative line numbering
+set number                   " Relative line numbering
 set ruler                    " Show row/col in status
 set showmatch                " Flash matching paren
 set history=50               " 50 lines of cmdline history

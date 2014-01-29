@@ -39,7 +39,7 @@ set history=50               " 50 lines of cmdline history
 " Toggle relative numbering
 function! ToggleNumbering()
   if (&relativenumber == 1)
-    set number
+    set norelativenumber
   else
     set relativenumber
   endif

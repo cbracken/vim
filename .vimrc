@@ -66,7 +66,7 @@ if &t_Co > 2 || has("gui_running")
   let g:liquidcarbon_high_contrast=1
   colorscheme liquidcarbon
   if has("gui_macvim")
-    set guifont=Menlo:h14
+    set guifont=Menlo:h11
   elseif has("unix")
     set guifont=Source\ Code\ Pro\ 11,Monospace\ 11
   endif

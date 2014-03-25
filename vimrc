@@ -8,6 +8,7 @@ Bundle 'blackboard.vim'
 Bundle 'Dart'
 Bundle 'fugitive.vim'
 Bundle 'gmarik/vundle'
+Bundle 'Blackrush/vim-gocode'
 Bundle 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}
 Bundle 'Liquid-Carbon'
 Bundle 'The-NERD-tree'

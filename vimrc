@@ -73,9 +73,8 @@ if &t_Co > 2 || has("gui_running")
 
   if has("autocmd")
     " Highlight over-length lines
-    highlight OverLength ctermbg=red ctermfg=white guibg=#592929
-    au BufEnter,InsertLeave * match OverLength /\%81v.\+/
-    au BufEnter,InsertLeave *.java match OverLength /\%101v.\+/
+    au BufEnter,InsertLeave * set colorcolumn=80
+    au BufEnter,InsertLeave *.java set colorcolumn=100
   endif
 endif
 

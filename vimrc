@@ -55,6 +55,7 @@ nmap <C-n> :call ToggleNumbering()<CR>
 " Indentation/tabulation
 set autoindent
 set smartindent
+set smarttab
 set ts=2
 set sw=2
 set softtabstop=2

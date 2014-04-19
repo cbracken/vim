@@ -36,6 +36,8 @@ set number                   " Relative line numbering
 set ruler                    " Show row/col in status
 set showmatch                " Flash matching paren
 set history=50               " 50 lines of cmdline history
+set wildmenu                 " Nicer autocomplete
+set wildmode=longest,full
 
 " Omnicomplete
 set completeopt+=longest

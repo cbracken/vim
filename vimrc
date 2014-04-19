@@ -17,15 +17,15 @@ filetype plugin indent on
 
 let s:cpo_save=&cpo
 set cpo&vim
-map!     <S-Insert> <MiddleMouse>
+map!     <S-Insert> <MiddleMouse>     " Middle-mouse paste
 map      <S-Insert> <MiddleMouse>
-inoremap jj         <ESC>
-nmap     <F2>       :noh<CR>           " Clear seach highlight
-noremap  <Up>        <NOP>
-noremap  <Down>      <NOP>
-noremap  <Left>      <NOP>
-noremap  <Right>     <NOP>
-vmap < <gv                             " Retain selection on >,<
+inoremap jj         <ESC>             " jj = ESC
+nmap     <F2>       :noh<CR>          " Clear seach highlight
+noremap  <Up>       <NOP>             " Kill arrow keys, for great justice
+noremap  <Down>     <NOP>
+noremap  <Left>     <NOP>
+noremap  <Right>    <NOP>
+vmap < <gv                            " Retain selection on >,<
 vmap > >gv
 let &cpo=s:cpo_save
 unlet s:cpo_save

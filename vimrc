@@ -37,6 +37,9 @@ set ruler                    " Show row/col in status
 set showmatch                " Flash matching paren
 set history=50               " 50 lines of cmdline history
 
+" Omnicomplete
+set completeopt+=longest
+
 " Toggle relative numbering
 function! ToggleNumbering()
   if (&relativenumber == 1)

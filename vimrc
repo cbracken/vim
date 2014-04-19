@@ -86,6 +86,14 @@ if has("gui_running")
   set guioptions-=T          " Hide toolbar
   set guioptions-=m          " Hide menu bar
 
+  " Cursor line highlighting
+  autocmd WinLeave * setlocal nocursorline
+  autocmd WinEnter * setlocal cursorline
+  autocmd BufLeave * setlocal nocursorline
+  autocmd BufEnter * setlocal cursorline
+  set cursorline
+  hi CursorLine guibg=#333333 cterm=none ctermbg=237
+
   " Menubar toggling
   function! ToggleMenu()
     if &go=~#'m'

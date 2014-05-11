@@ -26,8 +26,8 @@ noremap  <Up>       <NOP>             " Kill arrow keys, for great justice
 noremap  <Down>     <NOP>
 noremap  <Left>     <NOP>
 noremap  <Right>    <NOP>
-vmap < <gv                            " Retain selection on >,<
-vmap > >gv
+vmap     < <gv                        " Retain selection on >,<
+vmap     > >gv
 let &cpo=s:cpo_save
 unlet s:cpo_save
 

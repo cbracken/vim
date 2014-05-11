@@ -4,13 +4,12 @@ set encoding=utf-8
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
-Bundle 'blackboard.vim'
+Bundle 'vividchalk.vim'
 Bundle 'Dart'
 Bundle 'fugitive.vim'
 Bundle 'gmarik/vundle'
 Bundle 'Blackrush/vim-gocode'
 Bundle 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}
-Bundle 'Liquid-Carbon'
 Bundle 'The-NERD-tree'
 Bundle 'spacehi.vim'
 filetype plugin indent on
@@ -73,8 +72,7 @@ let g:spacehi_nbspcolor="ctermbg=red guibg=red"
 if &t_Co > 2 || has("gui_running")
   syntax on
   set background=dark
-  let g:liquidcarbon_high_contrast=1
-  colorscheme liquidcarbon
+  colorscheme vividchalk
   if has("gui_macvim")
     set guifont=Menlo:h11
   elseif has("unix")

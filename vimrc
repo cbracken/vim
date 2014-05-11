@@ -73,16 +73,29 @@ if &t_Co > 2 || has("gui_running")
   syntax on
   set background=dark
   colorscheme vividchalk
+  set cursorline
+  hi ColorColumn guibg=grey6 ctermbg=233
+  hi CursorLine guibg=grey6 cterm=NONE ctermbg=233
+
+  if has("autocmd")
+    " Cursor line highlighting
+    au WinLeave * setlocal nocursorline
+    au WinEnter * setlocal cursorline
+    au BufLeave * setlocal nocursorline
+    au BufEnter * setlocal cursorline
+
+    " Highlight over-length lines
+    au BufEnter,InsertLeave * set colorcolumn=80
+    au BufEnter,InsertLeave * set colorcolumn=80
+
+    " Highlight trailing space
+    au BufEnter,InsertLeave * SpaceHi
+  endif
+
   if has("gui_macvim")
     set guifont=Menlo:h11
   elseif has("unix")
     set guifont=Source\ Code\ Pro\ 10,Monospace\ 10
-  endif
-
-  if has("autocmd")
-    " Highlight over-length lines
-    au BufEnter,InsertLeave * set colorcolumn=80
-    au BufEnter,InsertLeave *.java set colorcolumn=100
   endif
 endif
 
@@ -93,14 +106,6 @@ if has("gui_running")
   set guioptions-=T          " Hide toolbar
   set guioptions-=m          " Hide menu bar
   set guioptions+=a          " Better integration with WM selection
-
-  " Cursor line highlighting
-  autocmd WinLeave * setlocal nocursorline
-  autocmd WinEnter * setlocal cursorline
-  autocmd BufLeave * setlocal nocursorline
-  autocmd BufEnter * setlocal cursorline
-  set cursorline
-  hi CursorLine guibg=#333333 cterm=none ctermbg=237
 
   " Menubar toggling
   function! ToggleMenu()

@@ -15,6 +15,7 @@ Bundle 'The-NERD-tree'
 Bundle 'spacehi.vim'
 filetype plugin indent on
 
+let mapleader=','
 let s:cpo_save=&cpo
 set cpo&vim
 map!     <S-Insert> <MiddleMouse>     " Middle-mouse paste

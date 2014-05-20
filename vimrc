@@ -4,7 +4,7 @@ set encoding=utf-8
 filetype off
 set rtp+=~/.vim/bundle/vundle
 call vundle#rc()
-Bundle 'vividchalk.vim'
+Bundle 'Lucius'
 Bundle 'Dart'
 Bundle 'fugitive.vim'
 Bundle 'gmarik/vundle'
@@ -72,10 +72,10 @@ let g:spacehi_nbspcolor="ctermbg=red guibg=red"
 if &t_Co > 2 || has("gui_running")
   syntax on
   set background=dark
-  colorscheme vividchalk
+  colorscheme lucius
   set cursorline
-  hi ColorColumn guibg=grey6 ctermbg=233
-  hi CursorLine guibg=grey6 cterm=NONE ctermbg=233
+  hi ColorColumn guibg=grey24 ctermbg=238
+  hi CursorLine guibg=grey24 ctermbg=238
 
   if has("autocmd")
     " Cursor line highlighting

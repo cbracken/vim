@@ -17,15 +17,23 @@ filetype plugin indent on
 let mapleader=','
 let s:cpo_save=&cpo
 set cpo&vim
-map!     <S-Insert> <MiddleMouse>     " Middle-mouse paste
+
+" Middle-mouse paste
+map!     <S-Insert> <MiddleMouse>
 map      <S-Insert> <MiddleMouse>
-inoremap jj         <ESC>             " jj = ESC
-nmap     <F2>       :noh<CR>          " Clear seach highlight
-noremap  <Up>       <NOP>             " Kill arrow keys, for great justice
+
+" Kill ex mode, map jj to ESC
+noremap  Q          <NOP>
+inoremap jj         <ESC>
+"
+" Kill arrow keys, for great justice
+noremap  <Up>       <NOP>
 noremap  <Down>     <NOP>
 noremap  <Left>     <NOP>
 noremap  <Right>    <NOP>
-vmap     < <gv                        " Retain selection on >,<
+
+" Retain selection on <,>
+vmap     < <gv
 vmap     > >gv
 let &cpo=s:cpo_save
 unlet s:cpo_save

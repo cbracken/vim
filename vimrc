@@ -48,6 +48,7 @@ set showmatch                " Flash matching paren
 set history=50               " 50 lines of cmdline history
 set wildmenu                 " Nicer autocomplete
 set wildmode=longest,full
+set wildignore=*.o,*.pyc
 
 " Omnicomplete
 set completeopt+=longest

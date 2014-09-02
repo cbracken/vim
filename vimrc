@@ -95,7 +95,7 @@ if &t_Co > 2 || has("gui_running")
 
     " Highlight over-length lines
     au BufEnter,InsertLeave * set colorcolumn=80
-    au BufEnter,InsertLeave * set colorcolumn=80
+    au BufEnter,InsertLeave *.java set colorcolumn=100
 
     " Highlight trailing space
     au BufEnter,InsertLeave * SpaceHi

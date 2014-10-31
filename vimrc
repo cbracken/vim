@@ -2,16 +2,17 @@ set nocompatible
 set encoding=utf-8
 
 filetype off
-set rtp+=~/.vim/bundle/vundle
-call vundle#rc()
-Bundle 'Lucius'
-Bundle 'Dart'
-Bundle 'fugitive.vim'
-Bundle 'gmarik/vundle'
-Bundle 'Blackrush/vim-gocode'
-Bundle 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}
-Bundle 'The-NERD-tree'
-Bundle 'spacehi.vim'
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+Plugin 'Lucius'
+Plugin 'Dart'
+Plugin 'fugitive.vim'
+Plugin 'Blackrush/vim-gocode'
+Plugin 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}
+Plugin 'The-NERD-tree'
+Plugin 'spacehi.vim'
+call vundle#end()
 filetype plugin indent on
 
 let mapleader=','

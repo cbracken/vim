@@ -7,9 +7,8 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lucius'
 Plugin 'git://github.com/dart-lang/dart-vim-plugin.git'
-Plugin 'git://github.com/jnwhiteh/vim-golang.git'
+Plugin 'fatih/vim-go'
 Plugin 'fugitive.vim'
-Plugin 'Blackrush/vim-gocode'
 Plugin 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}
 Plugin 'The-NERD-tree'
 Plugin 'spacehi.vim'
@@ -106,10 +105,6 @@ if &t_Co > 2 || has("gui_running")
 
     " Highlight trailing space
     au BufEnter,InsertLeave *.java,*.dart,*.h,*.c,*.cc,*.cs,*.m,*.s SpaceHi
-
-    " Apply gofmt
-    au FileType go autocmd BufEnter,InsertLeave <buffer> set syntax=go
-    au FileType go autocmd BufWritePre <buffer> Fmt
   endif
 
   if has("gui_macvim")

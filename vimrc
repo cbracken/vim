@@ -6,7 +6,7 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lucius'
-Plugin 'Dart'
+Plugin 'git://github.com/dart-lang/dart-vim-plugin.git'
 Plugin 'fugitive.vim'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}

@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lucius'
 Plugin 'git://github.com/dart-lang/dart-vim-plugin.git'
+Plugin 'git://github.com/jnwhiteh/vim-golang.git'
 Plugin 'fugitive.vim'
 Plugin 'Blackrush/vim-gocode'
 Plugin 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}
@@ -99,7 +100,11 @@ if &t_Co > 2 || has("gui_running")
     au BufEnter,InsertLeave *.java set colorcolumn=100
 
     " Highlight trailing space
-    au BufEnter,InsertLeave * SpaceHi
+    au BufEnter,InsertLeave *.java,*.dart,*.h,*.c,*.cc,*.cs,*.m,*.s SpaceHi
+
+    " Apply gofmt
+    au FileType go autocmd BufEnter,InsertLeave <buffer> set syntax=go
+    au FileType go autocmd BufWritePre <buffer> Fmt
   endif
 
   if has("gui_macvim")

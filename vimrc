@@ -13,6 +13,7 @@ Plugin 'Blackrush/vim-gocode'
 Plugin 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}
 Plugin 'The-NERD-tree'
 Plugin 'spacehi.vim'
+Plugin 'git://github.com/kien/ctrlp.vim.git'
 call vundle#end()
 filetype plugin indent on
 

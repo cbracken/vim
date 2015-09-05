@@ -12,7 +12,7 @@ Plugin 'https://github.com/rust-lang/rust.vim'
 Plugin 'fatih/vim-go'
 Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'fugitive.vim'
-Plugin 'git://github.com/scala/scala-dist.git', {'rtp': 'tool-support/src/vim'}
+Plugin 'git://github.com/scala/scala-tool-support.git', {'rtp': 'tool-support/src/vim'}
 Plugin 'The-NERD-tree'
 Plugin 'spacehi.vim'
 Plugin 'Syntastic'

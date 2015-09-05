@@ -58,6 +58,7 @@ set wildignore=*.o,*.pyc
 
 " Syntastic
 let g:syntastic_mode_map = { 'mode': 'passive' }
+let g:syntastic_go_checkers = ['go', 'golint']
 
 " Omnicomplete
 set completeopt+=longest

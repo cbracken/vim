@@ -55,6 +55,7 @@ set history=50               " 50 lines of cmdline history
 set wildmenu                 " Nicer autocomplete
 set wildmode=longest,full
 set wildignore=*.o,*.pyc
+set spelllang=en_ca
 
 " Syntastic
 let g:syntastic_mode_map = { 'mode': 'passive' }

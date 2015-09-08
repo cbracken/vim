@@ -90,7 +90,7 @@ let g:spacehi_nbspcolor="ctermbg=red guibg=red"
 
 " Colorscheme and syntax highlighting
 if &t_Co > 2 || has("gui_running")
-  syntax on
+  syntax enable
   set background=dark
   colorscheme lucius
   set cursorline

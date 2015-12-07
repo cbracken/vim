@@ -21,6 +21,10 @@ filetype plugin indent on
 runtime ftplugin/man.vim
 set keywordprg=:Man
 
+" google3 support
+source /usr/share/vim/google/glug/bootstrap.vim
+Glug ft-python
+
 let mapleader=','
 let s:cpo_save=&cpo
 set cpo&vim

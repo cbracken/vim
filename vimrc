@@ -84,6 +84,9 @@ set sw=2
 set softtabstop=2
 set expandtab
 
+" Fix python's indent overrides
+au FileType python setl ts=2 sw=2 sts=2 et
+
 " Whitespace highlighting
 let g:spacehi_spacecolor="ctermbg=red guibg=red"
 let g:spacehi_tabcolor="ctermbg=red guibg=red"

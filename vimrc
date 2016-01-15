@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'Lucius'
 Plugin 'git://github.com/dart-lang/dart-vim-plugin.git'
+Plugin 'git://github.com/google/vim-ft-bzl.git'
 Plugin 'git://github.com/leafgarland/typescript-vim.git'
 Plugin 'https://github.com/rust-lang/rust.vim'
 Plugin 'fatih/vim-go'

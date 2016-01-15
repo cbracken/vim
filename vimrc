@@ -115,7 +115,7 @@ if &t_Co > 2 || has("gui_running")
   if has("gui_macvim")
     set guifont=Menlo:h11
   elseif has("unix")
-    set guifont=Ricty\ 10,Fixed\ 10,Source\ Code\ Pro\ 10,Monospace\ 10
+    set guifont=Fixed\ 10,Ricty\ 10,Source\ Code\ Pro\ 10,Monospace\ 10
   endif
 endif
 

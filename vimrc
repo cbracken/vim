@@ -89,6 +89,15 @@ let g:spacehi_spacecolor="ctermbg=red guibg=red"
 let g:spacehi_tabcolor="ctermbg=red guibg=red"
 let g:spacehi_nbspcolor="ctermbg=red guibg=red"
 
+" Golang
+let g:go_fmt_command = "goimports"
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_structs = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:syntastic_go_checkers = ["go", "golint", "errcheck"]
+
 " Colorscheme and syntax highlighting
 if &t_Co > 2 || has("gui_running")
   syntax enable

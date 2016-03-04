@@ -11,7 +11,6 @@ Plugin 'git://github.com/google/vim-ft-bzl.git'
 Plugin 'git://github.com/leafgarland/typescript-vim.git'
 Plugin 'https://github.com/rust-lang/rust.vim'
 Plugin 'fatih/vim-go'
-Plugin 'nsf/gocode', {'rtp': 'vim/'}
 Plugin 'fugitive.vim'
 Plugin 'git://github.com/scala/scala-tool-support.git', {'rtp': 'tool-support/src/vim'}
 Plugin 'The-NERD-tree'

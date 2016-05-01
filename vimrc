@@ -6,17 +6,17 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 Plugin 'cbracken/vim-monochrome'
-Plugin 'git://github.com/dart-lang/dart-vim-plugin.git'
-Plugin 'git://github.com/google/vim-ft-bzl.git'
-Plugin 'git://github.com/leafgarland/typescript-vim.git'
-Plugin 'https://github.com/rust-lang/rust.vim'
+Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'google/vim-ft-bzl'
+Plugin 'leafgarland/typescript-vim'
+Plugin 'rust-lang/rust.vim'
 Plugin 'fatih/vim-go'
 Plugin 'fugitive.vim'
 Plugin 'git://github.com/scala/scala-tool-support.git', {'rtp': 'tool-support/src/vim'}
 Plugin 'The-NERD-tree'
 Plugin 'spacehi.vim'
 Plugin 'Syntastic'
-Plugin 'git://github.com/kien/ctrlp.vim.git'
+Plugin 'kien/ctrlp.vim'
 call vundle#end()
 filetype plugin indent on
 

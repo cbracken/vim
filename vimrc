@@ -105,6 +105,8 @@ if &t_Co > 2 || has("gui_running")
   syntax enable
   set background=dark
   colorscheme lucius
+
+  " Highlight cursor line
   set cursorline
   hi ColorColumn guibg=grey24 ctermbg=238
   hi CursorLine guibg=grey24 ctermbg=238

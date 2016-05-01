@@ -5,7 +5,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
-Plugin 'Lucius'
+Plugin 'cbracken/vim-monochrome'
 Plugin 'git://github.com/dart-lang/dart-vim-plugin.git'
 Plugin 'git://github.com/google/vim-ft-bzl.git'
 Plugin 'git://github.com/leafgarland/typescript-vim.git'
@@ -104,7 +104,7 @@ let g:ycm_dart_bin_folder_path = '~/.dvm/darts/stable'
 if &t_Co > 2 || has("gui_running")
   syntax enable
   set background=dark
-  colorscheme lucius
+  colorscheme monochrome
 
   " Highlight cursor line
   set cursorline

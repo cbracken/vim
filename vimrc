@@ -4,7 +4,7 @@ set encoding=utf-8
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'gmarik/Vundle.vim'
+Plugin 'VundleVim/Vundle.vim'
 Plugin 'cbracken/vim-monochrome'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'google/vim-ft-bzl'

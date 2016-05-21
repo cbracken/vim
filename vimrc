@@ -11,7 +11,6 @@ Plugin 'cbracken/vim-monochrome'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'fatih/vim-go'
 Plugin 'fugitive.vim'
-Plugin 'git://github.com/scala/scala-tool-support.git', {'rtp': 'tool-support/src/vim'}
 Plugin 'google/vim-ft-bzl'
 Plugin 'kien/ctrlp.vim'
 Plugin 'leafgarland/typescript-vim'

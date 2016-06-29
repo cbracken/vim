@@ -12,6 +12,7 @@ Plugin 'fugitive.vim'
 Plugin 'google/vim-ft-bzl'
 Plugin 'rust-lang/rust.vim'
 Plugin 'spacehi.vim'
+Plugin 'vimwiki/vimwiki'
 call vundle#end()
 filetype plugin indent on
 
@@ -55,6 +56,11 @@ set spelllang=en_ca
 " Syntastic
 let g:syntastic_mode_map = { 'mode': 'passive' }
 let g:syntastic_go_checkers = ['go', 'golint']
+
+" VimWiki
+let wiki = {}
+let wiki.path = '~/src/vimwiki'
+let g:vimwiki_list = [wiki]
 
 " Omnicomplete
 set completeopt+=longest

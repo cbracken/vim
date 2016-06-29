@@ -4,4 +4,4 @@ install:
 
 vundle:
 	mkdir -p bundle
-	git clone https://github.com/gmarik/Vundle.vim.git bundle/Vundle.vim
+	git clone https://github.com/VundleVim/Vundle.vim.git bundle/Vundle.vim

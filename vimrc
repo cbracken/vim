@@ -4,16 +4,12 @@ set encoding=utf-8
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'Syntastic'
-Plugin 'The-NERD-tree'
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'cbracken/vim-monochrome'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'fatih/vim-go'
 Plugin 'fugitive.vim'
 Plugin 'google/vim-ft-bzl'
-Plugin 'kien/ctrlp.vim'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'spacehi.vim'
 call vundle#end()

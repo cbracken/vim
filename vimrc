@@ -27,7 +27,7 @@ map      <S-Insert> <MiddleMouse>
 " Kill ex mode, map jj to ESC
 noremap  Q          <NOP>
 inoremap jj         <ESC>
-"
+
 " Kill arrow keys, for great justice
 noremap  <Up>       <NOP>
 noremap  <Down>     <NOP>

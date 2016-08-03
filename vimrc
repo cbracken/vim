@@ -99,7 +99,7 @@ let g:go_highlight_build_constraints = 1
 let g:syntastic_go_checkers = ["go", "golint", "errcheck"]
 
 " Dart SDK location
-let g:ycm_dart_bin_folder_path = '~/.dvm/darts/stable'
+let g:ycm_dart_sdk_path=$HOME.'/.dvm/darts/stable'
 
 " Colorscheme and syntax highlighting
 if &t_Co > 2 || has("gui_running")

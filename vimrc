@@ -53,10 +53,6 @@ set wildmode=longest,full
 set wildignore=*.o,*.pyc
 set spelllang=en_ca
 
-" Syntastic
-let g:syntastic_mode_map = { 'mode': 'passive' }
-let g:syntastic_go_checkers = ['go', 'golint']
-
 " VimWiki
 let wiki = {}
 let wiki.path = '~/src/vimwiki'

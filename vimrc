@@ -63,10 +63,13 @@ set completeopt+=longest
 
 " Toggle relative numbering
 function! ToggleNumbering()
-  if (&relativenumber == 1)
-    set norelativenumber
-  else
+  if (&number == 0)
+    set number
+  elseif (&relativenumber == 0)
     set relativenumber
+  else
+    set norelativenumber
+    set nonumber
   endif
 endfunc
 nmap <C-n> :call ToggleNumbering()<CR>

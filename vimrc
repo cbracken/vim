@@ -111,8 +111,8 @@ if &t_Co > 2 || has("gui_running")
 
   " Highlight cursor line
   set cursorline
-  hi ColorColumn guibg=grey24 ctermbg=238
-  hi CursorLine guibg=grey24 ctermbg=238 cterm=bold
+  hi ColorColumn guibg=grey24 ctermbg=233
+  hi CursorLine guibg=grey24 ctermbg=233 cterm=bold
   hi Pmenu ctermbg=grey
 
   if has("autocmd")

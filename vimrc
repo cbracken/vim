@@ -125,6 +125,9 @@ if &t_Co > 2 || has("gui_running")
   hi ColorColumn guibg=grey24 ctermbg=235
   hi CursorLine guibg=grey24 ctermbg=235 cterm=bold
 
+  " Highlight visual selection
+  hi Visual ctermbg=237
+
   if has("autocmd")
     " Cursor line highlighting
     au WinLeave * setlocal nocursorline

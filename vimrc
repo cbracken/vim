@@ -114,11 +114,16 @@ if &t_Co > 2 || has("gui_running")
   set background=dark
   colorscheme one
 
-  " Highlight cursor line
-  set cursorline
-  hi ColorColumn guibg=grey24 ctermbg=233
-  hi CursorLine guibg=grey24 ctermbg=233 cterm=bold
+  " No background colour in terminal
+  hi Normal ctermbg=none
+
+  " Completion menu colour
   hi Pmenu ctermbg=grey
+
+  " Highlight cursor line, max column
+  set cursorline
+  hi ColorColumn guibg=grey24 ctermbg=235
+  hi CursorLine guibg=grey24 ctermbg=235 cterm=bold
 
   if has("autocmd")
     " Cursor line highlighting

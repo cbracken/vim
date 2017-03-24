@@ -117,6 +117,12 @@ if &t_Co > 2 || has("gui_running")
   " No background colour in terminal
   hi Normal ctermbg=none
 
+  " Visual selection colour
+  hi Visual ctermbg=237
+
+  " Spelling mistake hightlight colour
+  hi SpellBad cterm=underline ctermbg=58
+
   " Completion menu colour
   hi Pmenu ctermbg=grey
 
@@ -125,8 +131,6 @@ if &t_Co > 2 || has("gui_running")
   hi ColorColumn guibg=grey24 ctermbg=235
   hi CursorLine guibg=grey24 ctermbg=235 cterm=bold
 
-  " Highlight visual selection
-  hi Visual ctermbg=237
 
   if has("autocmd")
     " Cursor line highlighting

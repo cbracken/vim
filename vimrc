@@ -12,7 +12,6 @@ Plugin 'fugitive.vim'
 Plugin 'google/vim-ft-bzl'
 Plugin 'rust-lang/rust.vim'
 Plugin 'spacehi.vim'
-Plugin 'vimwiki/vimwiki'
 Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on

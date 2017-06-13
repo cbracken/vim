@@ -7,13 +7,13 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'cbracken/vim-one'
 Plugin 'dart-lang/dart-vim-plugin'
+Plugin 'natebosch/vim-lsc'
 Plugin 'fatih/vim-go'
 Plugin 'fugitive.vim'
 Plugin 'google/vim-ft-bzl'
 Plugin 'keith/swift.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'spacehi.vim'
-Plugin 'Valloric/YouCompleteMe'
 call vundle#end()
 filetype plugin indent on
 
@@ -101,12 +101,10 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:syntastic_go_checkers = ["go", "golint", "errcheck"]
 
-" YouCompleteMe
-let g:ycm_dart_sdk_path=$HOME.'/.dvm/darts/flutter'
-let g:ycm_show_diagnostics_ui = 1
-let g:ycm_enable_diagnostic_signs = 0
-let g:ycm_enable_diagnostic_highlighting = 1
-let g:ycm_echo_current_diagnostic = 1
+" Dart language server protocol plugin
+let g:lsc_server_commands = {'dart': 'dart_language_server'}
+nnoremap gd :LSClientGoToDefinition<CR>
+nnoremap gr :LSClientFindReferences<CR>
 
 " Colorscheme and syntax highlighting
 if &t_Co > 2 || has("gui_running")

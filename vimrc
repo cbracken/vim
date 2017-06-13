@@ -121,7 +121,8 @@ if &t_Co > 2 || has("gui_running")
   hi Visual ctermbg=237
 
   " Spelling mistake hightlight colour
-  hi SpellBad cterm=underline ctermbg=58
+  hi SpellLocal cterm=underline ctermbg=58
+  hi SpellBad cterm=underline ctermbg=88
 
   " Completion menu colour
   hi Pmenu ctermbg=grey

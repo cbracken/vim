@@ -5,14 +5,15 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'cbracken/vim-one'
+Plugin 'cbracken/vim-one'           " Colour scheme
+Plugin 'spacehi.vim'                " Highlight bad whitespace
+
+" Language support
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'fatih/vim-go'
-Plugin 'fugitive.vim'
-Plugin 'google/vim-ft-bzl'
 Plugin 'keith/swift.vim'
 Plugin 'rust-lang/rust.vim'
-Plugin 'spacehi.vim'
+Plugin 'google/vim-ft-bzl'
 call vundle#end()
 filetype plugin indent on
 

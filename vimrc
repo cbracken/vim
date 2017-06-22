@@ -54,11 +54,6 @@ set wildmode=longest,full
 set wildignore=*.o,*.pyc
 set spelllang=en_ca
 
-" VimWiki
-let wiki = {}
-let wiki.path = '~/src/vimwiki'
-let g:vimwiki_list = [wiki]
-
 " Omnicomplete
 set completeopt+=longest
 

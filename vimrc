@@ -47,6 +47,7 @@ set hlsearch                 " Highlight search
 set visualbell               " Less noise
 set number                   " Relative line numbering
 set ruler                    " Show row/col in status
+set laststatus=1             " Only show status line if > 1 window
 set showmatch                " Flash matching paren
 set history=50               " 50 lines of cmdline history
 set wildmenu                 " Nicer autocomplete

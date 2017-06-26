@@ -134,7 +134,7 @@ if &t_Co > 2 || has("gui_running")
     au BufEnter,InsertLeave *.java set colorcolumn=100
 
     " Highlight trailing space
-    au BufEnter,InsertLeave *.bzl,*.c,*.cc,*.cs,*.dart,*.h,*.java,*.m,*.py,*.s SpaceHi
+    au BufEnter,InsertLeave *.bzl,*.c,*.cc,*.cs,*.dart,*.h,*.java,*.m,*.mm,*.py,*.s SpaceHi
   endif
 
   if has("gui_macvim")

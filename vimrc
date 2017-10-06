@@ -105,9 +105,6 @@ if &t_Co > 2 || has("gui_running")
   " No background colour in terminal
   hi Normal ctermbg=none
 
-  " Visual selection colour
-  hi Visual ctermbg=237
-
   " Spelling mistake hightlight colour
   hi SpellLocal cterm=underline ctermbg=58
   hi SpellBad cterm=underline ctermbg=88

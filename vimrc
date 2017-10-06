@@ -5,7 +5,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
-Plugin 'cbracken/vim-one'           " Colour scheme
+Plugin 'cbracken/nofrils'           " Colour scheme
 Plugin 'spacehi.vim'                " Highlight bad whitespace
 
 " Language support
@@ -100,7 +100,7 @@ let g:syntastic_go_checkers = ["go", "golint", "errcheck"]
 if &t_Co > 2 || has("gui_running")
   syntax enable
   set background=dark
-  colorscheme one
+  colorscheme nofrils-dark
 
   " No background colour in terminal
   hi Normal ctermbg=none
@@ -115,11 +115,8 @@ if &t_Co > 2 || has("gui_running")
   " Completion menu colour
   hi Pmenu ctermbg=grey
 
-  " Highlight cursor line, max column
+  " Highlight cursor line
   set cursorline
-  hi ColorColumn guibg=grey24 ctermbg=235
-  hi CursorLine guibg=grey24 ctermbg=235 cterm=bold
-
 
   if has("autocmd")
     " Cursor line highlighting

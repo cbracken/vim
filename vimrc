@@ -17,6 +17,10 @@ Plugin 'google/vim-ft-bzl'
 call vundle#end()
 filetype plugin indent on
 
+" Bind fancier manpage plugin to Shift-k
+runtime ftplugin/man.vim
+set keywordprg=:Man
+
 let mapleader=','
 let s:cpo_save=&cpo
 set cpo&vim

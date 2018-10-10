@@ -38,6 +38,20 @@ noremap  <Down>     <NOP>
 noremap  <Left>     <NOP>
 noremap  <Right>    <NOP>
 
+" Map clang-format
+map  <C-K>       :call ClangFormat()<cr>
+imap <C-K> <c-o> :call ClangFormat()<cr>
+
+function ClangFormat()
+  let l:line_start = getpos("'<")[1]
+  let l:line_end = getpos("'>")[1]
+  let l:lines = "all"
+  if l:line_start != 0 && l:line_end != 0
+    let l:lines = l:line_start . ":" . l:line_end
+  endif
+  py3f ~/share/clang/clang-format.py
+endfunction
+
 " Retain selection on <,>
 vmap     < <gv
 vmap     > >gv

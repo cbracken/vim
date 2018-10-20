@@ -39,8 +39,8 @@ noremap  <Left>     <NOP>
 noremap  <Right>    <NOP>
 
 " Map clang-format
-map  <C-K>       :call ClangFormat()<cr>
-imap <C-K> <c-o> :call ClangFormat()<cr>
+map  <C-K>      :call ClangFormat()<cr>
+imap <C-K> <ESC>:call ClangFormat()<cr>
 
 function ClangFormat()
   let l:line_start = getpos("'<")[1]

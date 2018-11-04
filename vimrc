@@ -131,7 +131,8 @@ if &t_Co > 2 || has("gui_running")
   hi SpellBad cterm=underline ctermbg=88
 
   " Completion menu colour
-  hi Pmenu ctermbg=grey
+  hi Pmenu ctermbg=0 ctermfg=8
+  hi PmenuSel ctermbg=8 ctermfg=15
 
   " Highlight cursor line, max column
   set cursorline

@@ -115,7 +115,7 @@ let g:go_highlight_build_constraints = 1
 let g:syntastic_go_checkers = ["go", "golint", "errcheck"]
 
 " Colorscheme and syntax highlighting
-if &t_Co > 2 || has("gui_running")
+if &t_Co > 2
   syntax enable
   set background=dark
   colorscheme one
@@ -139,7 +139,6 @@ if &t_Co > 2 || has("gui_running")
   hi ColorColumn guibg=grey24 ctermbg=235
   hi CursorLine guibg=grey24 ctermbg=235 cterm=bold
 
-
   if has("autocmd")
     " Cursor line highlighting
     au WinLeave * setlocal nocursorline
@@ -155,29 +154,4 @@ if &t_Co > 2 || has("gui_running")
     " Highlight trailing space
     au BufEnter,InsertLeave *.bzl,*.c,*.cc,*.cs,*.dart,*.h,*.java,*.m,*.mm,*.py,*.s SpaceHi
   endif
-
-  if has("gui_macvim")
-    set guifont=SF\ Mono:h13,Menlo:h13
-  elseif has("unix")
-    set guifont=Fixed\ 10,Ricty\ 10,Source\ Code\ Pro\ 10,Monospace\ 10
-  endif
-endif
-
-" Other UI stuff
-if has("gui_running")
-  set lines=60 columns=120
-  set showtabline=1          " Show tabs only if > 1 open
-  set guioptions-=T          " Hide toolbar
-  set guioptions-=m          " Hide menu bar
-  set guioptions+=a          " Better integration with WM selection
-
-  " Menubar toggling
-  function! ToggleMenu()
-    if &go=~#'m'
-      set go-=m
-    else
-      set go+=m
-    endif
-  endfunc
-  map <silent> <S-F1> :call ToggleMenu()<CR>
 endif

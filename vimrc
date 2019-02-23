@@ -5,6 +5,7 @@ filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
+Plugin 'rhysd/vim-clang-format'
 Plugin 'spacehi.vim'                " Highlight bad whitespace
 
 " Language support
@@ -37,7 +38,10 @@ noremap  <Down>     <NOP>
 noremap  <Left>     <NOP>
 noremap  <Right>    <NOP>
 
-" Map clang-format
+" Map clang-format to <Leader>cf
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+
 map  <C-K>      :call ClangFormat()<cr>
 imap <C-K> <ESC>:call ClangFormat()<cr>
 

@@ -17,6 +17,9 @@ Plugin 'google/vim-ft-bzl'
 call vundle#end()
 filetype plugin indent on
 
+" Tell find command to search subdirectories
+set path+=**
+
 " Bind fancier manpage plugin to Shift-k
 runtime ftplugin/man.vim
 set keywordprg=:Man

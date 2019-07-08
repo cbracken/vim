@@ -95,13 +95,13 @@ endfunc
 nmap <C-n> :call ToggleNumbering()<CR>
 
 " Indentation/tabulation
-set autoindent
-set smartindent
-set smarttab
-set ts=2
-set sw=2
-set softtabstop=2
-set expandtab
+set autoindent      " Copy indent from current line when starting a new line
+set smartindent     " Attempt to autoindent when starting a new line
+set smarttab        " Use shiftwidth rather than tabstop at start of line
+set tabstop=2       " Number of spaces a tab counts for
+set shiftwidth=2    " Number of spaces for each step of autoindent
+set softtabstop=2   " Number of spaces a tab counts for when editing
+set expandtab       " Insert spaces rather than tabs
 
 " Fix python's indent overrides
 au FileType python setl ts=2 sw=2 sts=2 et

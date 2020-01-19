@@ -136,14 +136,14 @@ if &t_Co > 2
   hi Pmenu ctermbg=0 ctermfg=8
   hi PmenuSel ctermbg=8 ctermfg=15
 
+  " Line numbers
+  hi LineNr ctermfg=7
+
   " Highlight cursor line, max column
   set cursorline
   hi ColorColumn guibg=grey24 ctermbg=235
   hi CursorLine guibg=grey24 ctermbg=235 cterm=bold
-
-  " Line numbers
-  hi LineNr ctermfg=7
-  hi CursorLineNr ctermfg=15
+  hi CursorLineNr ctermbg=235 cterm=bold
 
   if has("autocmd")
     " Cursor line highlighting

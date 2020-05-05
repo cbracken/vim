@@ -38,23 +38,6 @@ noremap  <Down>     <NOP>
 noremap  <Left>     <NOP>
 noremap  <Right>    <NOP>
 
-" Map clang-format to <Leader>cf
-autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
-autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
-
-map  <C-K>      :call ClangFormat()<cr>
-imap <C-K> <ESC>:call ClangFormat()<cr>
-
-function ClangFormat()
-  let l:line_start = getpos("'<")[1]
-  let l:line_end = getpos("'>")[1]
-  let l:lines = "all"
-  if l:line_start != 0 && l:line_end != 0
-    let l:lines = l:line_start . ":" . l:line_end
-  endif
-  py3f ~/share/clang/clang-format.py
-endfunction
-
 " Retain selection on <,>
 vmap     < <gv
 vmap     > >gv
@@ -77,19 +60,6 @@ set spelllang=en_ca
 
 " Omnicomplete
 set completeopt+=longest
-
-" Toggle relative numbering
-function! ToggleNumbering()
-  if (&number == 0)
-    set number
-  elseif (&relativenumber == 0)
-    set relativenumber
-  else
-    set norelativenumber
-    set nonumber
-  endif
-endfunc
-nmap <C-n> :call ToggleNumbering()<CR>
 
 " Indentation/tabulation
 set autoindent      " Copy indent from current line when starting a new line
@@ -163,3 +133,37 @@ if &t_Co > 2
     au BufEnter,InsertLeave *.bzl,*.c,*.cc,*.cs,*.dart,*.h,*.java,*.m,*.mm,*.py,*.s SpaceHi
   endif
 endif
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Functions
+
+" Insert the current date in '2020-04-22 (Thu)' format
+nnoremap <buffer><Leader>cd :put =strftime('%Y-%M-%d (%a)')<CR>
+
+" Apply clang-format to a range of lines (or all)
+function ClangFormat()
+  let l:line_start = getpos("'<")[1]
+  let l:line_end = getpos("'>")[1]
+  let l:lines = "all"
+  if l:line_start != 0 && l:line_end != 0
+    let l:lines = l:line_start . ":" . l:line_end
+  endif
+  py3f ~/share/clang/clang-format.py
+endfunction
+map  <C-K>      :call ClangFormat()<cr>
+imap <C-K> <ESC>:call ClangFormat()<cr>
+autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
+autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
+
+" Toggle relative numbering
+function! ToggleNumbering()
+  if (&number == 0)
+    set number
+  elseif (&relativenumber == 0)
+    set relativenumber
+  else
+    set norelativenumber
+    set nonumber
+  endif
+endfunc
+nmap <C-n> :call ToggleNumbering()<CR>

@@ -2,6 +2,7 @@
 ABI
 AOT
 Alt
+AltGr
 BIOS
 Bluetooth
 Bugzilla
@@ -20,9 +21,12 @@ IPv4
 IPv6
 IntelliJ
 JSON
+NTP
 NVIDIA
+OpenBSD
 RGBA
 Roll20
+SMTP
 TalkBack
 TestFlight
 TouchID
@@ -37,6 +41,8 @@ WiFi
 X11
 XWindows
 Xcode
+Xorg
+Yasuko
 amd64
 backend
 backends
@@ -69,6 +75,7 @@ i3
 iOS
 iTunes
 ibus
+kldload
 lifecycle
 localhost
 mL
@@ -80,9 +87,11 @@ mozc
 nasm
 ncurses
 passata
+pfctl
 plugin
 purée
 renderer
+runtime
 segfault
 sendmail
 sizeof

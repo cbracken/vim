@@ -150,8 +150,6 @@ function ClangFormat()
   endif
   py3f ~/share/clang/clang-format.py
 endfunction
-map  <C-K>      :call ClangFormat()<cr>
-imap <C-K> <ESC>:call ClangFormat()<cr>
 autocmd FileType c,cpp,objc nnoremap <buffer><Leader>cf :<C-u>ClangFormat<CR>
 autocmd FileType c,cpp,objc vnoremap <buffer><Leader>cf :ClangFormat<CR>
 

@@ -7,6 +7,7 @@ call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'rhysd/vim-clang-format'
 Plugin 'spacehi.vim'                " Highlight bad whitespace
+Plugin 'vimwiki/vimwiki'
 
 " Language support
 Plugin 'dart-lang/dart-vim-plugin'
@@ -87,6 +88,27 @@ let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:syntastic_go_checkers = ["go", "golint", "errcheck"]
 
+" VimWiki
+let wiki_1 = {}
+let wiki_1.path = '~/Documents/wiki/'
+let wiki_1.path_html = '~/Documents/wiki_html/'
+let wiki_1.nested_syntaxes = {'c': 'c', 'c++': 'cpp'}
+let wiki_2 = {}
+let wiki_2.path = '~/Documents/gwiki/'
+let wiki_2.path_html = '~/Documents/gwiki_html/'
+let wiki_2.nested_syntaxes = {'c++': 'cpp', 'dart': 'dart'}
+let g:vimwiki_list = [wiki_1, wiki_2]
+
+" Personal wiki diary index, new entry, task list
+nmap <leader>ji <Plug>VimwikiDiaryIndex
+nmap <leader>jn <Plug>VimwikiMakeDiaryNote
+nmap <leader>jt :e ~/Documents/wiki/Tasks.wiki<CR>
+
+" Work wiki diary index, new entry, task list
+nmap <leader>ki <Plug>VimwikiDiaryIndex
+nmap <leader>kn 2<Plug>VimwikiMakeDiaryNote
+nmap <leader>kt :e ~/Documents/gwiki/Tasks.wiki<CR>
+
 " Colorscheme and syntax highlighting
 if &t_Co > 2
   syntax enable
@@ -124,8 +146,8 @@ if &t_Co > 2
 
     " Highlight over-length lines
     au BufEnter,InsertLeave * set colorcolumn=80
-    au BufEnter,InsertLeave *.txt,*.md set colorcolumn=72
-    au BufEnter,InsertLeave *.txt,*.md set textwidth=72
+    au BufEnter,InsertLeave *.txt,*.md,*.wiki set colorcolumn=72
+    au BufEnter,InsertLeave *.txt,*.md,*.wiki set textwidth=72
     au BufEnter,InsertLeave *.java,*.m,*.mm set colorcolumn=100
     au BufEnter,InsertLeave *.java,*.m,*.mm set textwidth=100
 

@@ -25,10 +25,12 @@ JSON
 NFS
 NTP
 NVIDIA
+NetBSD
 OpenBSD
 RGBA
 Roll20
 SMTP
+TLS
 TalkBack
 TestFlight
 TouchID
@@ -94,6 +96,7 @@ ncurses
 parallelised
 passata
 pfctl
+plaintext
 plugin
 purée
 renderer

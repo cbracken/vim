@@ -100,14 +100,20 @@ let wiki_2.nested_syntaxes = {'c++': 'cpp', 'dart': 'dart'}
 let g:vimwiki_list = [wiki_1, wiki_2]
 
 " Personal wiki diary index, new entry, task list
-nmap <leader>ji <Plug>VimwikiDiaryIndex
+nmap <leader>jw <Plug>VimwikiIndex
+nmap <leader>jd <Plug>VimwikiDiaryIndex
 nmap <leader>jn <Plug>VimwikiMakeDiaryNote
 nmap <leader>jt :e ~/Documents/wiki/Tasks.wiki<CR>
 
 " Work wiki diary index, new entry, task list
-nmap <leader>ki <Plug>VimwikiDiaryIndex
+nmap <leader>kw 2<Plug>VimwikiIndex
+nmap <leader>kd 2<Plug>VimwikiDiaryIndex
 nmap <leader>kn 2<Plug>VimwikiMakeDiaryNote
 nmap <leader>kt :e ~/Documents/gwiki/Tasks.wiki<CR>
+
+" Wiki diary previous, next day
+au FileType vimwiki nmap <leader>dp <Plug>VimwikiDiaryPrevDay
+au FileType vimwiki nmap <leader>dn <Plug>VimwikiDiaryNextDay
 
 " Colorscheme and syntax highlighting
 if &t_Co > 2
@@ -160,7 +166,7 @@ endif
 " Functions
 
 " Insert the current date in '2020-04-22 (Thu)' format
-nnoremap <buffer><Leader>cd :put =strftime('%Y-%M-%d (%a)')<CR>
+nnoremap <Leader>cd i<C-R>=strftime('%Y-%M-%d (%a)')<CR><Esc>
 
 " Apply clang-format to a range of lines (or all)
 function ClangFormat()

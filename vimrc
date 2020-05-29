@@ -166,7 +166,7 @@ endif
 " Functions
 
 " Insert the current date in '2020-04-22 (Thu)' format
-nnoremap <Leader>cd i<C-R>=strftime('%Y-%M-%d (%a)')<CR><Esc>
+nnoremap <Leader>cd i<C-R>=strftime('%Y-%m-%d (%a)')<CR><Esc>
 
 " Apply clang-format to a range of lines (or all)
 function ClangFormat()

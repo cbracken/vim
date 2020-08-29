@@ -96,13 +96,13 @@ let wiki_1.nested_syntaxes = {'c': 'c', 'c++': 'cpp'}
 let wiki_2 = {}
 let wiki_2.path = '~/Documents/gwiki/'
 let wiki_2.path_html = '~/Documents/gwiki_html/'
-let wiki_2.nested_syntaxes = {'c++': 'cpp', 'dart': 'dart'}
+let wiki_2.nested_syntaxes = {'c++': 'cpp', 'dart': 'dart', 'sh': 'sh'}
 let g:vimwiki_list = [wiki_1, wiki_2]
 
 " Personal wiki diary index, new entry, task list
-nmap <leader>jw <Plug>VimwikiIndex
-nmap <leader>jd <Plug>VimwikiDiaryIndex
-nmap <leader>jn <Plug>VimwikiMakeDiaryNote
+nmap <leader>jw 1<Plug>VimwikiIndex
+nmap <leader>jd 1<Plug>VimwikiDiaryIndex
+nmap <leader>jn 1<Plug>VimwikiMakeDiaryNote
 nmap <leader>jt :e ~/Documents/wiki/Tasks.wiki<CR>
 
 " Work wiki diary index, new entry, task list

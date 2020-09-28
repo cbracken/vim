@@ -90,26 +90,41 @@ let g:syntastic_go_checkers = ["go", "golint", "errcheck"]
 
 " VimWiki
 let wiki_1 = {}
-let wiki_1.path = '~/Documents/wiki/'
-let wiki_1.path_html = '~/Documents/wiki_html/'
-let wiki_1.nested_syntaxes = {'c': 'c', 'c++': 'cpp'}
+let wiki_1.index = 'Home'
+let wiki_1.path = '~/Documents/personal.wiki/'
+let wiki_1.path_html = '~/Documents/personal.wiki_html/'
+let wiki_1.nested_syntaxes = {'c': 'c', 'c++': 'cpp', 'shell': 'sh'}
+let wiki_1.syntax = 'markdown'
+let wiki_1.ext = '.md'
 let wiki_2 = {}
-let wiki_2.path = '~/Documents/gwiki/'
-let wiki_2.path_html = '~/Documents/gwiki_html/'
-let wiki_2.nested_syntaxes = {'c++': 'cpp', 'dart': 'dart', 'sh': 'sh'}
-let g:vimwiki_list = [wiki_1, wiki_2]
+let wiki_2.index = 'Home'
+let wiki_2.path = '~/Documents/google.wiki/'
+let wiki_2.path_html = '~/Documents/google.wiki_html/'
+let wiki_2.nested_syntaxes = {'c++': 'cpp', 'dart': 'dart', 'shell': 'sh'}
+let wiki_2.syntax = 'markdown'
+let wiki_2.ext = '.md'
+let wiki_3 = {}
+let wiki_3.index = 'Home'
+let wiki_3.path = '~/Documents/journal.wiki/'
+let wiki_3.path_html = '~/Documents/journal.wiki_html/'
+let wiki_3.diary_rel_path = ''
+let wiki_3.nested_syntaxes = {'c++': 'cpp', 'dart': 'dart', 'shell': 'sh'}
+let wiki_3.syntax = 'markdown'
+let wiki_3.ext = '.md'
+let g:vimwiki_list = [wiki_1, wiki_2, wiki_3]
 
-" Personal wiki diary index, new entry, task list
+" Only consider files under a VimWiki path to be VimWiki
+let g:vimwiki_global_ext = 0
+
+" Personal wiki index, diary, new entry
 nmap <leader>jw 1<Plug>VimwikiIndex
-nmap <leader>jd 1<Plug>VimwikiDiaryIndex
-nmap <leader>jn 1<Plug>VimwikiMakeDiaryNote
-nmap <leader>jt :e ~/Documents/wiki/Tasks.wiki<CR>
+nmap <leader>jd 3<Plug>VimwikiDiaryIndex
+nmap <leader>jn 3<Plug>VimwikiMakeDiaryNote
 
-" Work wiki diary index, new entry, task list
+" Work wiki index, diary, new entry
 nmap <leader>kw 2<Plug>VimwikiIndex
-nmap <leader>kd 2<Plug>VimwikiDiaryIndex
-nmap <leader>kn 2<Plug>VimwikiMakeDiaryNote
-nmap <leader>kt :e ~/Documents/gwiki/Tasks.wiki<CR>
+nmap <leader>kd 3<Plug>VimwikiDiaryIndex
+nmap <leader>kn 3<Plug>VimwikiMakeDiaryNote
 
 " Wiki diary previous, next day
 au FileType vimwiki nmap <leader>dp <Plug>VimwikiDiaryPrevDay

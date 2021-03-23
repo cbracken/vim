@@ -120,6 +120,9 @@ let g:vimwiki_list = [wiki_1, wiki_2, wiki_3]
 " Only consider files under a VimWiki path to be VimWiki.
 let g:vimwiki_global_ext = 0
 
+" Don't shorten URLs.
+let g:vimwiki_url_maxsave = 0
+
 " Personal wiki index, diary, new entry.
 nmap <leader>jw 1<Plug>VimwikiIndex
 nmap <leader>jd 3<Plug>VimwikiDiaryIndex

@@ -144,6 +144,7 @@ nmap <leader>sci :0r ~/.vim/snippets/cc.cc<CR>
 nmap <leader>scn :.-1r ~/.vim/snippets/namespace.cc<CR>
 nmap <leader>scs :.-1r ~/.vim/snippets/struct.cc<CR>
 nmap <leader>scc :.-1r ~/.vim/snippets/class.cc<CR>
+nmap <leader>sjn :.-1r ~/.vim/snippets/journal.md<CR>
 
 " Configure colour scheme and syntax highlighting.
 if &t_Co > 2

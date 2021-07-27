@@ -118,6 +118,9 @@ let wiki_3.syntax = 'markdown'
 let wiki_3.ext = '.md'
 let g:vimwiki_list = [wiki_1, wiki_2, wiki_3]
 
+" Use Home.md for the diary index to match GitHub's main wiki page.
+let g:vimwiki_diary_index = 'Home'
+
 " Only consider files under a VimWiki path to be VimWiki.
 let g:vimwiki_global_ext = 0
 

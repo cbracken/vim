@@ -15,6 +15,7 @@ Plugin 'fatih/vim-go'
 Plugin 'keith/swift.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'google/vim-ft-bzl'
+Plugin 'cespare/vim-toml'
 Plugin 'https://gn.googlesource.com/gn', { 'rtp': 'misc/vim' }
 call vundle#end()
 filetype plugin indent on

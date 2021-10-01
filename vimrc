@@ -10,12 +10,12 @@ Plugin 'spacehi.vim'                " Highlight bad whitespace
 Plugin 'vimwiki/vimwiki'
 
 " Language support plugins.
+Plugin 'cespare/vim-toml'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'fatih/vim-go'
+Plugin 'google/vim-ft-bzl'
 Plugin 'keith/swift.vim'
 Plugin 'rust-lang/rust.vim'
-Plugin 'google/vim-ft-bzl'
-Plugin 'cespare/vim-toml'
 Plugin 'https://gn.googlesource.com/gn', { 'rtp': 'misc/vim' }
 call vundle#end()
 filetype plugin indent on

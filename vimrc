@@ -14,6 +14,7 @@ Plugin 'cespare/vim-toml'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'fatih/vim-go'
 Plugin 'google/vim-ft-bzl'
+Plugin 'lervag/vimtex'
 Plugin 'keith/swift.vim'
 Plugin 'rust-lang/rust.vim'
 Plugin 'https://gn.googlesource.com/gn', { 'rtp': 'misc/vim' }

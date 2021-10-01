@@ -10,6 +10,7 @@ Plugin 'spacehi.vim'                " Highlight bad whitespace
 Plugin 'vimwiki/vimwiki'
 
 " Language support plugins.
+Plugin 'nathangrigg/vim-beancount'
 Plugin 'cespare/vim-toml'
 Plugin 'dart-lang/dart-vim-plugin'
 Plugin 'fatih/vim-go'
@@ -94,6 +95,25 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:syntastic_go_checkers = ["go", "golint", "errcheck"]
+
+" Configure ledger.
+let g:ledger_date_format = '%Y-%m-%d'
+au FileType ledger inoremap <silent> <Tab> <C-r>=ledger#autocomplete_and_align()<CR>
+au FileType ledger vnoremap <silent> <Tab> :LedgerAlign<CR>
+
+" Configure beancount.
+let g:beancount_separator_col = 60
+function! BeancountComplete()
+  let line = getline('.')
+  if matchend(line, '^\s\+') >= col('.') - 1
+    return '\<C-x>\<C-o>'
+  endif
+  return '\<Tab>'
+endfunction
+au FileType beancount inoremap <silent> <Tab> <C-r>=BeancountComplete()<CR>
+au FileType beancount inoremap . .<C-\><C-o>:AlignCommodity<CR>
+au FileType beancount nnoremap <buffer> <leader>= :AlignCommodity<CR>
+au FileType beancount vnoremap <buffer> <leader>= :AlignCommodity<CR>
 
 " Configure VimWiki.
 let wiki_1 = {}

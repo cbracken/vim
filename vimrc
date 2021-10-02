@@ -2,24 +2,22 @@ set nocompatible
 set encoding=utf-8
 
 filetype off
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'rhysd/vim-clang-format'
-Plugin 'spacehi.vim'                " Highlight bad whitespace
-Plugin 'vimwiki/vimwiki'
+call plug#begin('~/.vim/plugged')
+Plug 'rhysd/vim-clang-format'
+Plug 'vim-scripts/spacehi.vim'  " Highlight bad whitespace
+Plug 'vimwiki/vimwiki'
 
 " Language support plugins.
-Plugin 'nathangrigg/vim-beancount'
-Plugin 'cespare/vim-toml'
-Plugin 'dart-lang/dart-vim-plugin'
-Plugin 'fatih/vim-go'
-Plugin 'google/vim-ft-bzl'
-Plugin 'lervag/vimtex'
-Plugin 'keith/swift.vim'
-Plugin 'rust-lang/rust.vim'
-Plugin 'https://gn.googlesource.com/gn', { 'rtp': 'misc/vim' }
-call vundle#end()
+Plug 'nathangrigg/vim-beancount'
+Plug 'cespare/vim-toml'
+Plug 'dart-lang/dart-vim-plugin'
+Plug 'fatih/vim-go'
+Plug 'google/vim-ft-bzl'
+Plug 'lervag/vimtex'
+Plug 'keith/swift.vim'
+Plug 'rust-lang/rust.vim'
+Plug 'https://gn.googlesource.com/gn', { 'rtp': 'misc/vim' }
+call plug#end()
 filetype plugin indent on
 
 " Bind fancier manpage plugin to Shift-k.

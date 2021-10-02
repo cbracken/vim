@@ -1,4 +1,10 @@
+# vim-plug
+autoload/plug.vim
+plugged
+
+# vundle
 bundle
+
 .netrwhist
 *.spl
 *.sug

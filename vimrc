@@ -5,7 +5,7 @@ filetype off
 call plug#begin('~/.vim/plugged')
 Plug 'rhysd/vim-clang-format'
 Plug 'vim-scripts/spacehi.vim'  " Highlight bad whitespace
-Plug 'vimwiki/vimwiki'
+Plug 'https://git.bracken.jp/vimwiki.git', { 'branch': 'space-link-resolution' }
 
 " Language support plugins.
 Plug 'nathangrigg/vim-beancount'

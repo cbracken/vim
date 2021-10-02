@@ -81,7 +81,6 @@ au FileType python setl ts=2 sw=2 sts=2 et
 " Configure whitespace highlighting.
 let g:spacehi_spacecolor="ctermbg=red guibg=red"
 let g:spacehi_tabcolor="ctermbg=red guibg=red"
-let g:spacehi_nbspcolor="ctermbg=red guibg=red"
 
 " Configure tag file locations.
 set tags+=~/.local/tags/system.tags
@@ -214,7 +213,7 @@ if &t_Co > 2
     au BufEnter,InsertLeave *.java,*.m,*.mm set textwidth=100
 
     " Highlight trailing space
-    au BufEnter,InsertLeave *.bzl,*.c,*.cc,*.cs,*.dart,*.h,*.java,*.m,*.mm,*.py,*.s SpaceHi
+    au BufEnter,InsertLeave *.bzl,*.c,*.cc,*.cpp,*.cs,*.dart,*.h,*.java,*.m,*.mm,*.py,*.s SpaceHi
   endif
 endif
 

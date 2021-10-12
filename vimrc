@@ -1,6 +1,12 @@
 set nocompatible
 set encoding=utf-8
 
+" Remove any autocmds defined by the system for consistency.
+if has("autocmd")
+  autocmd!
+endif
+
+
 filetype off
 call plug#begin('~/.vim/plugged')
 Plug 'rhysd/vim-clang-format'

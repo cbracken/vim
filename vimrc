@@ -17,7 +17,7 @@ Plug 'https://git.bracken.jp/vimwiki.git', { 'branch': 'space-link-resolution' }
 Plug 'nathangrigg/vim-beancount'
 Plug 'cespare/vim-toml'
 Plug 'dart-lang/dart-vim-plugin'
-Plug 'fatih/vim-go'
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'google/vim-ft-bzl'
 Plug 'lervag/vimtex'
 Plug 'keith/swift.vim'

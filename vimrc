@@ -146,6 +146,10 @@ nmap <leader>jd <Plug>VimwikiDiaryIndex
 nmap <leader>jn <Plug>VimwikiMakeDiaryNote
 nmap <leader>jg :VimwikiGoto 
 
+" Use markdown syntax highlighting in vimwiki.
+" By default it wants to set syntax=vimwiki even for files with extension md.
+au BufEnter,InsertLeave *.md setlocal syntax=markdown
+
 " Wiki diary previous, next day.
 au FileType vimwiki nmap <leader>dp <Plug>VimwikiDiaryPrevDay
 au FileType vimwiki nmap <leader>dn <Plug>VimwikiDiaryNextDay

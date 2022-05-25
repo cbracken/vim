@@ -41,6 +41,9 @@ map      <S-Insert> <MiddleMouse>
 " Kill ex mode.
 noremap  Q          <NOP>
 
+" Disable visual-mode mouse select.
+set mouse-=a
+
 " Kill arrow keys, for great justice.
 noremap  <Up>       <NOP>
 noremap  <Down>     <NOP>

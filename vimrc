@@ -124,8 +124,8 @@ au FileType beancount vnoremap <buffer> <leader>= :AlignCommodity<CR>
 " Configure VimWiki.
 let wiki_1 = {}
 let wiki_1.index = 'Home'
-let wiki_1.path = '~/Documents/personal.wiki/'
-let wiki_1.path_html = '~/Documents/personal.wiki_html/'
+let wiki_1.path = '~/Documents/Wiki/personal/'
+let wiki_1.path_html = '~/Documents/Wiki/personal.html/'
 let wiki_1.nested_syntaxes = {'c': 'c', 'c++': 'cpp', 'dart': 'dart', 'shell': 'sh'}
 let wiki_1.syntax = 'markdown'
 let wiki_1.ext = '.md'

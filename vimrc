@@ -6,6 +6,7 @@ if has("autocmd")
   autocmd!
 endif
 
+.
 
 filetype off
 call plug#begin('~/.vim/plugged')
@@ -116,8 +117,8 @@ function! BeancountComplete()
   endif
   return '\<Tab>'
 endfunction
-au FileType beancount inoremap <silent> <Tab> <C-r>=BeancountComplete()<CR>
-au FileType beancount inoremap . .<C-\><C-o>:AlignCommodity<CR>
+au FileType beancount inoremap <buffer> <silent> <Tab> <C-r>=BeancountComplete()<CR>
+au FileType beancount inoremap <buffer> . .<C-\><C-o>:AlignCommodity<CR>
 au FileType beancount nnoremap <buffer> <leader>= :AlignCommodity<CR>
 au FileType beancount vnoremap <buffer> <leader>= :AlignCommodity<CR>
 

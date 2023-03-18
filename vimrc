@@ -127,6 +127,7 @@ let wiki_1 = {}
 let wiki_1.index = 'Home'
 let wiki_1.path = '~/Documents/Wiki/personal/'
 let wiki_1.path_html = '~/Documents/Wiki/personal.html/'
+let wiki_1.diary_rel_path = 'Daily Notes/'
 let wiki_1.nested_syntaxes = {'c': 'c', 'c++': 'cpp', 'dart': 'dart', 'shell': 'sh'}
 let wiki_1.syntax = 'markdown'
 let wiki_1.ext = '.md'

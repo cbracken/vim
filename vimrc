@@ -6,8 +6,6 @@ if has("autocmd")
   autocmd!
 endif
 
-.
-
 filetype off
 call plug#begin('~/.vim/plugged')
 Plug 'rhysd/vim-clang-format'

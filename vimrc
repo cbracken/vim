@@ -12,15 +12,12 @@ filetype off
 call plug#begin('~/.vim/plugged')
 Plug 'rhysd/vim-clang-format'
 Plug 'vim-scripts/spacehi.vim'  " Highlight bad whitespace
-Plug 'https://git.bracken.jp/vimwiki.git', { 'branch': 'space-link-resolution' }
 
 " Language support plugins.
-Plug 'nathangrigg/vim-beancount'
 Plug 'cespare/vim-toml'
 Plug 'dart-lang/dart-vim-plugin'
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 Plug 'google/vim-ft-bzl'
-Plug 'lervag/vimtex'
 Plug 'keith/swift.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'https://gn.googlesource.com/gn', { 'rtp': 'misc/vim' }
@@ -102,59 +99,6 @@ let g:go_highlight_structs = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_build_constraints = 1
 let g:syntastic_go_checkers = ["go", "golint", "errcheck"]
-
-" Configure ledger.
-let g:ledger_date_format = '%Y-%m-%d'
-au FileType ledger inoremap <silent> <Tab> <C-r>=ledger#autocomplete_and_align()<CR>
-au FileType ledger vnoremap <silent> <Tab> :LedgerAlign<CR>
-
-" Configure beancount.
-let g:beancount_separator_col = 60
-function! BeancountComplete()
-  let line = getline('.')
-  if matchend(line, '^\s\+') >= col('.') - 1
-    return '\<C-x>\<C-o>'
-  endif
-  return '\<Tab>'
-endfunction
-au FileType beancount inoremap <buffer> <silent> <Tab> <C-r>=BeancountComplete()<CR>
-au FileType beancount inoremap <buffer> . .<C-\><C-o>:AlignCommodity<CR>
-au FileType beancount nnoremap <buffer> <leader>= :AlignCommodity<CR>
-au FileType beancount vnoremap <buffer> <leader>= :AlignCommodity<CR>
-
-" Configure VimWiki.
-let wiki_1 = {}
-let wiki_1.index = 'Home'
-let wiki_1.path = '~/Documents/Wiki/personal/'
-let wiki_1.path_html = '~/Documents/Wiki/personal.html/'
-let wiki_1.diary_rel_path = 'Daily Notes/'
-let wiki_1.nested_syntaxes = {'c': 'c', 'c++': 'cpp', 'dart': 'dart', 'shell': 'sh'}
-let wiki_1.syntax = 'markdown'
-let wiki_1.ext = '.md'
-let g:vimwiki_list = [wiki_1]
-
-" Use Home.md for the diary index to match GitHub's main wiki page.
-let g:vimwiki_diary_index = 'Home'
-
-" Only consider files under a VimWiki path to be VimWiki.
-let g:vimwiki_global_ext = 0
-
-" Don't shorten URLs.
-let g:vimwiki_url_maxsave = 0
-
-" Personal wiki index, diary, new entry.
-nmap <leader>jw <Plug>VimwikiIndex
-nmap <leader>jd <Plug>VimwikiDiaryIndex
-nmap <leader>jn <Plug>VimwikiMakeDiaryNote
-nmap <leader>jg :VimwikiGoto 
-
-" Use markdown syntax highlighting in vimwiki.
-" By default it wants to set syntax=vimwiki even for files with extension md.
-au BufEnter,InsertLeave *.md setlocal syntax=markdown
-
-" Wiki diary previous, next day.
-au FileType vimwiki nmap <leader>dp <Plug>VimwikiDiaryPrevDay
-au FileType vimwiki nmap <leader>dn <Plug>VimwikiDiaryNextDay
 
 " Snippets
 nmap <leader>sch :0r ~/.vim/snippets/cc.h<CR>

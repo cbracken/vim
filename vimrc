@@ -78,9 +78,6 @@ set shiftwidth=2    " Number of spaces for each step of autoindent.
 set softtabstop=2   " Number of spaces per tab when editing.
 set expandtab       " Insert spaces in place of tabs.
 
-" Fix python's indent overrides.
-au FileType python setl ts=2 sw=2 sts=2 et
-
 " Configure whitespace highlighting.
 let g:spacehi_spacecolor="ctermbg=red guibg=red"
 let g:spacehi_tabcolor="ctermbg=red guibg=red"
@@ -150,6 +147,9 @@ if &t_Co > 2
 
     " Highlight trailing space
     au BufEnter,InsertLeave *.bzl,*.c,*.cc,*.cpp,*.cs,*.dart,*.h,*.java,*.m,*.mm,*.py,*.s SpaceHi
+
+    " Fix python's indent overrides.
+    au FileType python setl ts=2 sw=2 sts=2 et
   endif
 endif
 

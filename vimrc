@@ -6,7 +6,6 @@ if has("autocmd")
   autocmd!
 endif
 
-filetype off
 call plug#begin('~/.vim/plugged')
 Plug 'rhysd/vim-clang-format'   " clang-format.
 Plug 'vim-scripts/spacehi.vim'  " Highlight bad whitespace.
@@ -21,7 +20,6 @@ Plug 'keith/swift.vim'
 Plug 'rust-lang/rust.vim'
 Plug 'https://gn.googlesource.com/gn', { 'rtp': 'misc/vim' }
 call plug#end()
-filetype plugin indent on
 
 " Bind fancier manpage plugin to Shift-k.
 runtime ftplugin/man.vim

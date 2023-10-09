@@ -9,7 +9,6 @@ endif
 call plug#begin('~/.vim/plugged')
 Plug 'rhysd/vim-clang-format'   " clang-format.
 Plug 'vim-scripts/spacehi.vim'  " Highlight bad whitespace.
-Plug 'fxn/vim-monochrome'       " Colour scheme.
 
 " Language support plugins.
 Plug 'cespare/vim-toml'
@@ -106,7 +105,6 @@ nmap <leader>sjn :.-1r ~/.vim/snippets/journal.md<CR>
 if &t_Co > 2
   syntax enable
   set background=dark
-  colorscheme monochrome
 
   " No background colour in terminal.
   hi Normal ctermbg=none
